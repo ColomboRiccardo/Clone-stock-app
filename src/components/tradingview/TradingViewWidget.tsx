@@ -4,15 +4,7 @@ import useTradingViewWidget from "@/hooks/UseTradingViewWidget";
 import React, {memo} from 'react';
 import {cn} from "@/lib/utils";
 
-interface TradingViewWidgetProps {
-    title?: string;
-    scriptUrl: string;
-    config: Record<string, unknown>;
-    height?: number;
-    className: string
-}
-
-const TradingViewWidget = ({title, scriptUrl, config, height = 600, className}: TradingViewWidgetProps) => {
+const TradingViewWidget = ({title, scriptUrl, config, height = 600, className}: any) => {
     const containerRef = useTradingViewWidget(scriptUrl, config, height)
 
     return (
